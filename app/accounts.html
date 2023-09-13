@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="./css/stylesheet.css">
+        <meta charset="UTF-8"/>
+        <title>Welcome</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    </head>
+
+    <header>
+        <ul class="nav nav-pills border-bottom">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/accounts.html">Accounts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/payment_orders">Payment orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/company">Company</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/bills">Company bills</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/transfers">Transfers sent</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/transfer_received">Transfers received</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/Payments">Payments</a>
+              </li>
+              <li class="nav-item float-end">
+                <a class="nav-link" href="/index">Log out</a>
+            </li>
+          </ul>
+    </header>
+    <body>
+        <button id="show-account-modal" class="button btn btn-primary mt-5">Add account</button>
+        <div class="list-container">
+            <div class="list-header container text-center">
+                <div class="row">
+                    <div class="col-2">
+                        ID
+                    </div>
+                    <div class="col-1">
+                        IBAN
+                    </div>
+                    <div class="col-2">
+                        Card number
+                    </div>
+                    <div class="col-1">
+                        Name
+                    </div>
+                    <div class="col-1">
+                        Balance
+                    </div>
+                    <div class="col-1">
+                        CW
+                    </div>
+                    <div class="col-1">
+                        Expiration date
+                    </div>
+                    <div class="col-1">
+                        Phone number
+                    </div>
+                </div>
+            </div>
+            <div class="list-header-2 container text-center border shadow-sm p-3 mb-5 bg-body-tertiary rounded"></div>
+        </div>
+        <div id="addAccountModal" class="modal position-absolute bg-light border w-50 h-50 shadow-sm p-3 mb-5">
+            <button class="close-btn btn btn-close float-right">Close</button>
+            <form id="addAccountForm" class="form container mt-4">
+                <div class="row">
+                    <label for="name-input">Name</label>
+                <input type="text" id="name" name="name" class="name">
+                </div>
+                <div class="row">
+                    <label for="phone-input">Phone number</label>
+                    <input type="text" id="phone" name="phone" class="phone">
+                </div>
+                <div class="row">
+                    <label for="phone-input">Add the balance your account starts with</label>
+                    <input type="number" id="balance" name="balance" class="balance">
+                </div>
+                <div class="row">
+                    <button type="submit" id="addAccount" class="button btn btn-success mt-2">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div id="modifyAccountModal" class="modal position-absolute bg-light border w-50 h-50 shadow-sm p-3 mb-5">
+            <button class="close-btn btn btn-close float-right">Close</button>
+            <form id="modifyAccountForm" class="form container mt-4">
+                <div class="row">
+                    <label for="name-input">Name</label>
+                <input type="text" id="name" name="name" class="name">
+                </div>
+                <div class="row">
+                    <label for="phone-input">Phone number</label>
+                <input type="text" id="phone" name="phone" class="phone">
+                </div>
+                <div class="row">
+                    <label for="new-card" class="form-check-label">New Card</label>
+                    <input type="checkbox" id="new-card" name="new-card" class="new-card form-check-input">
+                </div>
+                <div class="row">
+                    <button type="submit" id="addAccount" class="button btn btn-success mt-2">Submit</button>
+                </div>
+            </form>
+        </div>
+        <script type="module" src="./js/accounts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
